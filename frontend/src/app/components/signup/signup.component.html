@@ -1,0 +1,18 @@
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+  
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" class="form-control"[class.is-invalid]= "email.invalid && email.touched"name="email" [(ngModel)]="user.email"#email="ngModel" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+    
+   
+    <small class="text-danger" [class.d-none]="email.valid || email.touched">Enter a valid email</small>
+    </div> 
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" class="form-control" name="password" [(ngModel)]="user.password" required minlength="6">
+    </div>
+    
+    <div class="form-group">
+      <button class="btn btn-danger btn-block" [disabled]="userForm.form.invalid">SignUp</button>
+    </div>
+  </form>

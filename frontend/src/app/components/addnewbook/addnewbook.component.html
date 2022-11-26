@@ -1,0 +1,26 @@
+
+<div class="container pt-5">
+    <form [formGroup]="bookform" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="exampleInputTitle" class="form-label">Title</label>
+          <input type="text" class="form-control" id="exampleInputTitle" aria-describedby="titlelHelp" formControlName="title">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputAuthor" class="form-label">Author</label>
+          <input  class="form-control" id="exampleInputAuthor" formControlName="author">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputGenre" class="form-label">Genre</label>
+            <input  class="form-control" id="exampleInputGenre" formControlName="genre">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputYear" class="form-label">Year</label>
+            <input  class="form-control" id="exampleInputYear" formControlName="year">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputDescription" class="form-label">Description</label>
+            <input  class="form-control" id="exampleInputDescription" formControlName="description">
+          </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
